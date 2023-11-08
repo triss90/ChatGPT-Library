@@ -20,8 +20,8 @@ API Documentation: [https://platform.openai.com/docs/guides/text-generation](htt
 
 ```php
 <?php 
-echo $ai->textGeneration('Who is Tristan White?')->choices[0]->message->content; 
-echo $ai->textGeneration('Who is Tristan White?','gpt-3.5-turbo')->choices[0]->message->content; 
+    echo $ai->textGeneration('Who is Tristan White?')->choices[0]->message->content; 
+    echo $ai->textGeneration('Who is Tristan White?','gpt-3.5-turbo')->choices[0]->message->content; 
 ?>
 ```
 
@@ -30,7 +30,7 @@ echo $ai->textGeneration('Who is Tristan White?','gpt-3.5-turbo')->choices[0]->m
 
 ```php
 <?php 
-echo "<p>".$ai->textGeneration('Who is tristan white?')->choices[0]->message->content."</p>"; 
+    echo "<p>".$ai->textGeneration('Who is tristan white?')->choices[0]->message->content."</p>"; 
 ?>
 ```
 
@@ -52,8 +52,8 @@ API Documentation: [https://platform.openai.com/docs/guides/images/usage?context
 
 ```php
 <?php 
-$ai->imageGeneration('Draw Tristan White as a magnificent robot'); 
-$ai->imageGeneration('Draw Tristan White as a magnificent robot','1024x1792');
+    $ai->imageGeneration('Draw Tristan White as a magnificent robot'); 
+    $ai->imageGeneration('Draw Tristan White as a magnificent robot','1024x1792');
 ?>
 ```
 
@@ -85,8 +85,10 @@ API Documentation: [https://platform.openai.com/docs/guides/text-to-speech](http
 **Result:** file containing the audio data. The default response format is "mp3"
 
 ```php
-$ai->textToSpeech('Who is Tristan White?','/path/to/my/audio.mp3');
-$ai->textToSpeech('Who is Tristan White?','/path/to/my/audio.mp3','onyx');
+<?php 
+    $ai->textToSpeech('Who is Tristan White?','/path/to/my/audio.mp3');
+    $ai->textToSpeech('Who is Tristan White?','/path/to/my/audio.mp3','onyx');
+?>
 ```
 
 ### Example
