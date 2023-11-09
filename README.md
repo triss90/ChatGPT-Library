@@ -8,7 +8,7 @@ API Documentation: [https://platform.openai.com/docs/guides/text-generation](htt
 
 ### Usage
 
-`$prompt` The prompt for generating the text response.
+`$prompt` The prompt for generating the text response. Either a string or an array of prompts.
 
 `$model` The gpt-3.5-turbo model to use for text generation. Available models: gpt-4, gpt-3.5-turbo.
 
@@ -25,56 +25,20 @@ echo $ai->textGeneration('Who is Tristan White?','gpt-3.5-turbo')->choices[0]->m
 ?>
 ```
 
-
 ### Example
 
 ```php
 <?php 
 echo "<p>".$ai->textGeneration('Who is tristan white?')->choices[0]->message->content."</p>"; 
-?>
-```
-
-
-## Chat Generation
-
-Generates a text response based on the given array of prompts using the specified parameters.
-
-API Documentation: [https://platform.openai.com/docs/guides/text-generation](https://platform.openai.com/docs/guides/text-generation)
-
-### Usage
-
-`$promptArray` The array of prompts for generating the text response.
-
-`$model` The gpt-3.5-turbo model to use for text generation. Available models: gpt-4, gpt-3.5-turbo.
-
-`$temperature` The temperature parameter for controlling randomness (default: 0.7).
-
-`$maxTokens` The maximum number of tokens in the generated text (default: 1000).
-
-**Result:** An array containing 'data' and 'error' keys, representing the generated text and any errors.
-
-```php
-<?php 
-echo $ai->chatGeneration($chats)->choices[0]->message->content; 
-echo $ai->chatGeneration($chats,'gpt-3.5-turbo')->choices[0]->message->content; 
-?>
-```
-
-### Example
-
-```php
-<?php 
 $chats = [
     ["role" => "system", "content" => "You are a helpful assistant." ], 
     ["role" => "user", "content" => "Who won the world series in 2020?" ], 
     ["role" => "assistant", "content" => "The Los Angeles Dodgers won the World Series in 2020." ], 
     ["role" => "user", "content" => "Where was it played?" ] 
 ];
-echo "<p>".$ai->chatGeneration($chats)->choices[0]->message->content."</p>"; 
+echo "<p>".$ai->textGeneration($chats)->choices[0]->message->content."</p>"; 
 ?>
 ```
-
-
 
 ## Image Generation
 

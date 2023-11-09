@@ -15,17 +15,15 @@ $ai = new ChatGPT;
 
 <?php
 // Text Generation
-// echo "<p>".$ai->textGeneration('who is Tristan White?')->choices[0]->message->content."</p>";
-
-
-// Chat Generation
 // $chats = [
 //     ["role" => "system", "content" => "You are a helpful assistant." ], 
 //     ["role" => "user", "content" => "Who won the world series in 2020?" ], 
 //     ["role" => "assistant", "content" => "The Los Angeles Dodgers won the World Series in 2020." ], 
 //     ["role" => "user", "content" => "Where was it played?" ] 
 // ];
-// echo $ai->chatGeneration($chats)->choices[0]->message->content;
+// $chat = 'who is Tristan White?';
+// echo "<p>".$ai->textGeneration($chat)->choices[0]->message->content."</p>";
+// echo "<p>".$ai->textGeneration($chats)->choices[0]->message->content."</p>";
 
 
 // Image Generation
