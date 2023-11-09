@@ -1,5 +1,7 @@
 # OpenAI Api integration
 
+A PHP class that simplifies interactions with the OpenAI API. Includes functions to generate text, generate images and convert text to speech.
+
 ## Text Generation
 
 Generates a text response based on the given prompt using the specified parameters.
