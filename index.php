@@ -20,7 +20,6 @@ $ai = new ChatGPT;
 
 // Image Generation
 // $image = $ai->imageGeneration('Draw Tristan White as a magnificent robot'); 
-// var_dump($image);
 // echo '<img src="'.$image->data[0]->url.'" alt="'.$image->data[0]->revised_prompt.'">';
 
 
