@@ -20,8 +20,8 @@ API Documentation: [https://platform.openai.com/docs/guides/text-generation](htt
 
 ```php
 <?php 
-    echo $ai->textGeneration('Who is Tristan White?')->choices[0]->message->content; 
-    echo $ai->textGeneration('Who is Tristan White?','gpt-3.5-turbo')->choices[0]->message->content; 
+echo $ai->textGeneration('Who is Tristan White?')->choices[0]->message->content; 
+echo $ai->textGeneration('Who is Tristan White?','gpt-3.5-turbo')->choices[0]->message->content; 
 ?>
 ```
 
@@ -30,7 +30,7 @@ API Documentation: [https://platform.openai.com/docs/guides/text-generation](htt
 
 ```php
 <?php 
-    echo "<p>".$ai->textGeneration('Who is tristan white?')->choices[0]->message->content."</p>"; 
+echo "<p>".$ai->textGeneration('Who is tristan white?')->choices[0]->message->content."</p>"; 
 ?>
 ```
 
@@ -52,8 +52,8 @@ API Documentation: [https://platform.openai.com/docs/guides/images/usage?context
 
 ```php
 <?php 
-    $ai->imageGeneration('Draw Tristan White as a magnificent robot'); 
-    $ai->imageGeneration('Draw Tristan White as a magnificent robot','1024x1792');
+$ai->imageGeneration('Draw Tristan White as a magnificent robot'); 
+$ai->imageGeneration('Draw Tristan White as a magnificent robot','1024x1792');
 ?>
 ```
 
@@ -61,8 +61,8 @@ API Documentation: [https://platform.openai.com/docs/guides/images/usage?context
 
 ```php
 <?php 
-    $image = $ai->imageGeneration('Draw Tristan White as a magnificent robot'); 
-    echo '<img src="'.$image->data[0]->url.'" alt="'.$image->data[0]->revised_prompt.'">';
+$image = $ai->imageGeneration('Draw Tristan White as a magnificent robot'); 
+echo '<img src="'.$image->data[0]->url.'" alt="'.$image->data[0]->revised_prompt.'">';
 ?>
 ```
 
@@ -86,16 +86,16 @@ API Documentation: [https://platform.openai.com/docs/guides/text-to-speech](http
 
 ```php
 <?php 
-    $ai->textToSpeech('Who is Tristan White?','/path/to/my/audio.mp3');
-    $ai->textToSpeech('Who is Tristan White?','/path/to/my/audio.mp3','onyx');
+$ai->textToSpeech('Who is Tristan White?','/path/to/my/audio.mp3');
+$ai->textToSpeech('Who is Tristan White?','/path/to/my/audio.mp3','onyx');
 ?>
 ```
 
 ### Example
 ```php
 <?php
-    $path = "audio.mp3";
-    $ai->textToSpeech('Who is Tristan White?',$path);
-    echo '<audio autoplay><source src="'.$path.'" type="audio/mpeg"></audio>';
+$path = "audio.mp3";
+$ai->textToSpeech('Who is Tristan White?',$path);
+echo '<audio autoplay><source src="'.$path.'" type="audio/mpeg"></audio>';
 ?>
 ```
